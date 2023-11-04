@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Inter UI';
+  src:
+    local('Inter UI'),
+    url(../../fonts/Inter-UI-Regular.otf) format('opentype');
+}
+
+* {
+  font-family: 'Inter UI', sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1010px;
+  background: #fff;
+  padding: 36px;
+}
