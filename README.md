@@ -12,5 +12,4 @@ https://image.tmdb.org/t/p/w500
 Настроить хаски и Линт Стейдж
 Настроить длину описания фильма относительно размера высоты карточки и высоты названия
 
-
-//  urlDefaultFilms = 'https://api.themoviedb.org/3/search/movie?query=bob&include_adult=false&language=en-US&page=1'
+// urlDefaultFilms = 'https://api.themoviedb.org/3/search/movie?query=bob&include_adult=false&language=en-US&page=1'
