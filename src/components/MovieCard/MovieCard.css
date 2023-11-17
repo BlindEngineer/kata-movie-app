@@ -4,7 +4,7 @@
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: row;
-  transition: all ease-in 300ms;
+  transition: box-shadow ease-in 300ms;
 }
 
 .card:hover {
@@ -20,17 +20,22 @@
 .card__image-block {
   width: 183px;
   height: 281px;
+  flex-shrink: 0;
 }
 
 .card__information {
   padding: 12px 20px 50px;
   flex-shrink: 1;
+  position: relative;
+  flex-grow: 1;
 }
 
 .card__header {
   font-size: 20px;
   line-height: 28px;
   padding-bottom: 7px;
+  display: inline;
+  /*width: 210px;*/
 }
 
 .card__date {
@@ -38,6 +43,7 @@
   color: #827e7e;
   font-size: 12px;
   line-height: 22px;
+  padding-top: 7px;
   padding-bottom: 7px;
 }
 
@@ -47,6 +53,15 @@
   list-style-type: none;
   padding-bottom: 7px;
   gap: 8px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  max-width: 228px;
+}
+
+.card__genres::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .card__genre {
@@ -58,9 +73,75 @@
   font-size: 12px;
   line-height: normal;
   padding: 0 4px 0 5px;
+  white-space: nowrap;
 }
 
 .card__description {
   font-size: 12px;
   line-height: 22px;
+  font-family: 'Inter UI', sans-serif;
+  font-weight: 400;
+}
+
+.card__stars {
+margin-inline-end: 2px ;
+position: absolute;
+  bottom: 20px;
+}
+
+.card__rating {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  top: -3px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  font-size: 12px;
+}
+.card__rating--no-rating {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+.card__rating--red {
+  border-color: #e90000;
+}
+.card__rating--orange {
+  border-color: #e97e00;
+}
+.card__rating--yellow {
+  border-color: #e9d100;
+}
+.card__rating--green {
+  border-color: #66e900;
+}
+
+@media (max-width: 540px) {
+  .card__image {
+    width: 60px;
+    height: 91px;
+  }
+
+  .card__image-block {
+    width: 60px;
+    height: 91px;
+    margin-left: 10px;
+    margin-top: 6px;
+  }
+
+  .card {
+    width: 387px;
+    height: 246px;
+  }
+
+  .card__stars {
+    right: 20px;
+  }
+
+  .card__text-and-rate {
+    margin-left: -80px;
+  }
 }
